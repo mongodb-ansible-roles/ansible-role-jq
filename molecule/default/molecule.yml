@@ -1,0 +1,27 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+lint:
+  name: yamllint
+platforms:
+  - name: stretch64
+    image: debian:9
+
+  - name: trusty64
+    image: ubuntu:14.04
+
+  - name: xenial64
+    image: ubuntu:16.04
+
+  - name: bionic64
+    image: ubuntu:18.04
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+verifier:
+  name: inspec
+  lint:
+    name: rubocop
