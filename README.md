@@ -15,7 +15,7 @@ Role Variables
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-------:|:--------:|
-| name | desc | type | default | required |
+| jq\_version | The version of jq to install | string | `"latest"` | no |
 
 Dependencies
 ------------
@@ -29,7 +29,6 @@ Example Playbook
 - hosts: all
   roles:
     - role: ansible-role-jq
-      vars:
 ```
 
 Development

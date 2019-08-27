@@ -17,6 +17,9 @@ platforms:
 
   - name: bionic64
     image: ubuntu:18.04
+
+  - name: centos
+    image: centos:7
 provisioner:
   name: ansible
   lint:
