@@ -1,0 +1,14 @@
+---
+- name: Install jq
+  get_url:
+    dest: /usr/bin/jq
+    mode: 0755
+    url: https://github.com/stedolan/jq/releases/latest/download/jq-linux64
+  when: jq_version == "latest"
+
+- name: Install jq
+  get_url:
+    dest: /usr/bin/jq
+    mode: 0755
+    url: https://github.com/stedolan/jq/releases/download/jq-{{ jq_version }}/jq-linux64
+  when: jq_version != "latest"
